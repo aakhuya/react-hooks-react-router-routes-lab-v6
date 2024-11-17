@@ -18,9 +18,13 @@ function Movie() {
 
   return (
     <div>
-      <h1>{movie.title}</h1>
-      <p>Time: {movie.time}</p>
-      <p>Genres: {movie.genres.join(', ')}</p>
+       <h1>{movie.title}</h1>
+      <p>{movie.time}</p>
+      <div>
+        {movie.genres.map((genre) => (
+          <span key={genre}>{genre}</span>
+        ))}
+      </div>
     </div>
   );
 }

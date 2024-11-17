@@ -14,11 +14,13 @@ function Home() {
   return (
     <div>
       <h1>Home Page</h1>
-      <div className="movie-list">
-        {movies.map(movie => (
-          <MovieCard key={movie.id} movie={movie} />
+      <ul>
+        {movies.map((movie) => (
+          <li key={movie.id}>
+            <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
